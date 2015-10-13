@@ -1,0 +1,39 @@
+{
+  "name": "caddiweb",
+  "version": "0.0.1",
+  "description": "Website for Caddi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "caddicorp",
+  "license": "ISC",
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-html-replace": "^1.5.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-stylus": "^2.1.0",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "jeet": "^6.1.2",
+    "lodash.assign": "^3.2.0",
+    "react": "^0.14.0",
+    "react-router": "^1.0.0-rc3",
+    "rupture": "^0.6.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "csurf": "^1.8.3",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "underscore": "^1.8.3"
+  }
+}
