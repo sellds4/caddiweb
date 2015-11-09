@@ -1,7 +1,7 @@
 import { Router, Route, Link, IndexRoute, IndexLink } from 'react-router'
-import createBrowserHistory from '../../../node_modules/react-router/node_modules/history/lib/createBrowserHistory'
+import { createHistory } from 'history'
 
-var history = createBrowserHistory();
+var history = createHistory();
 
 // components
 var LoginForm = require('./components/LoginForm.jsx'),
