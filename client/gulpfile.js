@@ -41,7 +41,7 @@ var customOpts = {
     cache: {}, packageCache: {}, fullPaths: true
 };
 var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts)); 
+var b = watchify(browserify(opts));
 // add transformations here
 // i.e. b.transform(coffeeify);
 b.transform(babelify)
@@ -101,4 +101,4 @@ gulp.task('replaceHTML', function(){
 
 gulp.task('production', ['replaceHTML', 'build']);
 
-gulp.task('default', ['watch', 'js', 'stylus']);
+gulp.task('default', ['copy', 'js', 'stylus', 'watch']);
