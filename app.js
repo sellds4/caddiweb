@@ -7,7 +7,7 @@ var bodyParser = require('body-parser'),
     _  = require('underscore');
 
 // setup route middlewares
-// var csrfProtection = csrf({ cookie: true });
+var csrfProtection = csrf({ cookie: true });
 var parseForm = bodyParser.urlencoded({ extended: false });
 
 var app = express();
@@ -30,6 +30,7 @@ app.use(
         cookie: { secure: true }
     })
 );
+app.use(csrfProtection);
 
 
 // app.use(function (req, res, next) {

@@ -22,21 +22,17 @@
 // };
 
 var csrf = require('csurf'),
-	express = require('express'),
-	path = require('path');
+		express = require('express'),
+		path = require('path');
 
 var index = express.Router();
 
-var csrfProtection = csrf({ cookie: true });
+index.route('/').get(function(req, res) {
+		res.sendFile(path.resolve('dist/index.html'), { root: __dirname, csrfToken: req.csrfToken() });
+});
 
-index.route('/')
-  	.get(function(req, res) {
-		res.sendFile('../../dist/index.html', { root: __dirname, csrfToken: req.csrfToken() });
-  	});
-
-index.route('*')
-  	.get(function(req, res) {
-		res.sendFile('../../dist/index.html', { root: __dirname, csrfToken: req.csrfToken() });
-  	});
+index.route('*').get(function(req, res) {
+		res.sendFile(path.resolve('dist/index.html'), { root: __dirname, csrfToken: req.csrfToken() });
+});
 
 module.exports = index;

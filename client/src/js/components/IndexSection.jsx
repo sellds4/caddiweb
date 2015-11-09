@@ -1,7 +1,7 @@
 import React from 'react'
 
 var divStyle = {
-	'background-color': 'blue',
+	backgroundColor: 'blue',
   	height: '300px'
 };
 
